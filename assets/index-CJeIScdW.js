@@ -51,7 +51,7 @@ Error generating stack: `+a.message+`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 200px;
+  gap: 100px;
   width: 100%;
   height: 100vh;
   color: #00d857;
