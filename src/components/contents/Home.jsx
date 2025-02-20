@@ -20,6 +20,7 @@ const TitleBox = styled.div`
   h3 {
     font-size: 2.4rem;
     font-weight: 900;
+    opacity: 0.8;
   }
 `;
 const DevInfo = styled.div`
