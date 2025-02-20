@@ -70,7 +70,7 @@ Error generating stack: `+a.message+`
   }
 `,zy=uu.div`
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   right: 20px;
   display: flex;
   flex-direction: column;
