@@ -71,7 +71,7 @@ Error generating stack: `+a.message+`
 `,zy=uu.div`
   position: absolute;
   bottom: 20px;
-  right: 20px;
+  right: 60px;
   display: flex;
   flex-direction: column;
   gap: 12px;
