@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 100px;
   width: 100%;
   height: 100vh;
   color: #00d857;
@@ -12,7 +12,7 @@ const TitleBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0px;
-  text-align: right;
+  text-align: center;
   h2 {
     font-size: 4.8rem;
     font-weight: 900;
@@ -24,6 +24,9 @@ const TitleBox = styled.div`
   }
 `;
 const DevInfo = styled.div`
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
   display: flex;
   flex-direction: column;
   gap: 12px;
