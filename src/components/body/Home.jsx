@@ -1,36 +1,56 @@
 import styled from "styled-components";
+import { IsDesktop, IsTablet, mq } from "../../lib/mediaQuery";
 
 const Container = styled.div`
+  position: relative;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 100px;
   width: 100%;
-  height: 100vh;
+  min-height: calc(100vh - 56px);
   color: #00d857;
+  padding: 40px 0;
 `;
 const TitleBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0px;
-  text-align: center;
+  text-align: right;
   h2 {
+    width: 100%;
     font-size: 4.8rem;
     font-weight: 900;
+    letter-spacing: 0.02em;
+    ${mq("tablet")} {
+      font-size: 8rem;
+    }
+    ${mq("desktop")} {
+      font-size: 10rem;
+    }
   }
   h3 {
     font-size: 2.4rem;
+    letter-spacing: 0.011em;
     font-weight: 900;
     opacity: 0.8;
+    ${mq("tablet")} {
+      font-size: 4rem;
+    }
+    ${mq("desktop")} {
+      font-size: 5rem;
+    }
   }
 `;
 const DevInfo = styled.div`
-  position: absolute;
-  bottom: 20px;
-  right: 60px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0.8;
   text-align: right;
+  ${mq("desktop")} {
+    bottom: 120px;
+  }
 `;
 
 const Home = () => {
