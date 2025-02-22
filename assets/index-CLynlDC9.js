@@ -100,11 +100,13 @@ Error generating stack: `+e.message+`
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
-  height: 200px;
+  height: 160px;
   width: 100%;
   border-radius: 30px;
   background: #454141;
   cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+
   ${el("desktop")} {
     height: 280px;
     max-width: 440px;
@@ -112,17 +114,46 @@ Error generating stack: `+e.message+`
   }
 
   &:hover {
-    /* background: #00d857; */
+    color: #00d857;
+    transform: scale(1.05);
     opacity: 0.95;
   }
+
   a {
+    width: fit-content;
     font-size: 2.8rem;
     font-weight: 900;
-    :hover {
-    }
+    position: relative;
+    display: inline-block; /* 글씨 크기만큼만 차지하게 함 */
+
     ${el("desktop")} {
       font-size: 3.2rem;
     }
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%; /* 글자 크기만큼만 적용 */
+    height: 2px;
+    background: #00d857;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  &:hover a::after {
+    transform: scaleX(1);
+  }
+  img {
+    transition: filter 0.1s ease-in-out;
+  }
+
+  &:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(99%) saturate(553%)
+      hue-rotate(75deg) brightness(90%) contrast(92%);
   }
 `,bd=Jt.div`
   display: flex;
