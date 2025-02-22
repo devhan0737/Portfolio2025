@@ -100,7 +100,7 @@ Error generating stack: `+e.message+`
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
-  height: 160px;
+  height: 140px;
   width: 100%;
   border-radius: 30px;
   background: #454141;
@@ -121,10 +121,10 @@ Error generating stack: `+e.message+`
 
   a {
     width: fit-content;
-    font-size: 2.8rem;
-    font-weight: 900;
+    font-size: 2rem;
+    font-weight: 700;
     position: relative;
-    display: inline-block; /* 글씨 크기만큼만 차지하게 함 */
+    display: inline-block;
 
     ${el("desktop")} {
       font-size: 3.2rem;
@@ -157,9 +157,10 @@ Error generating stack: `+e.message+`
   }
 `,bd=Jt.div`
   display: flex;
+  font-size: 1.6rem;
   justify-content: space-between;
+  font-weight: 300;
   ${el("desktop")} {
-    font-weight: 400;
     font-size: 2rem;
   }
 `,xy=()=>$.jsxs(Dy,{children:[$.jsx(My,{children:"PREVIEW"}),$.jsxs(Ry,{children:[$.jsxs("span",{children:["남다른 센스로 코드를 디자인하는"," ",$.jsx("span",{className:"name",children:"SENSECODER"}),"입니다."]}),$.jsx("p",{children:"신입 개발자로서 빠르게 성장하고 함께 더 나은 서비스를 만들어갈 팀을 찾고 있습니다."})]}),$.jsxs(Uy,{children:[$.jsxs(Sd,{children:[$.jsx("a",{href:"#",children:"Project"}),$.jsxs(bd,{children:["프로젝트",$.jsx("img",{src:pd,alt:"버튼 화살표"})]})]}),$.jsxs(Sd,{children:[$.jsx("a",{href:"#",children:"About Me"}),$.jsxs(bd,{children:["가치관, 경험, 계획",$.jsx("img",{src:pd,alt:"버튼 화살표"})]})]})]})]}),Hy="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='23.1323'%20height='3.43586'%20rx='1.71793'%20transform='matrix(0.656068%20-0.754702%200.76968%200.63843%200%2017.458)'%20fill='%2300D857'/%3e%3crect%20width='10.9203'%20height='3.43586'%20rx='1.71793'%20transform='matrix(0.656068%20-0.754702%200.76968%200.63843%2010.1909%2017.8064)'%20fill='%2300D857'/%3e%3c/svg%3e",Ny=Jt.header`
