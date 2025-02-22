@@ -3,8 +3,12 @@ import styled from "styled-components";
 import Preview from "./Preview";
 import Header from "./../header/Header";
 import Home from "./home";
+import Footer from "../footer/Footer";
 
 const Container = styled.div`
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
   position: relative;
   width: 100%;
   padding-top: 56px;
@@ -13,7 +17,6 @@ const Container = styled.div`
 const ContentsWrapper = () => {
   return (
     <Container>
-      <Header />
       <Home />
       <Preview />
     </Container>

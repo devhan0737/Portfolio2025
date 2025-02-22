@@ -8,7 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   gap: 100px;
   width: 100%;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100svh - 56px);
   color: #00d857;
   padding: 40px 0;
 `;
@@ -48,6 +48,7 @@ const DevInfo = styled.div`
   gap: 12px;
   opacity: 0.8;
   text-align: right;
+  font-size: 1.8rem;
   ${mq("desktop")} {
     bottom: 120px;
   }

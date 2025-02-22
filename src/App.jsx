@@ -3,6 +3,9 @@ import "./styles/basic.css";
 import { IsDesktop, mq } from "./lib/mediaQuery";
 import ContentsWrapper from "./components/body/ContentsWrapper";
 import bgImage from "./assets/texture_background.webp";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+
 const Container = styled.div`
   position: relative;
   width: 100vw;
@@ -20,7 +23,7 @@ const Container = styled.div`
     pointer-events: none;
     mix-blend-mode: exclusion;
     background-image: url(${bgImage});
-    opacity: 0.05;
+    opacity: 0.07;
     background-position: 0px 0px;
     width: 100%;
     height: 100%;
@@ -32,7 +35,9 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <Header />
       <ContentsWrapper />
+      <Footer />
     </Container>
   );
 }
