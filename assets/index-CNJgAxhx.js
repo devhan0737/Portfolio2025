@@ -152,9 +152,10 @@ Please change the parent <Route path="${M}"> to <Route path="${M==="/"?"*":`${M}
   }
 `,Pv=ae.li`
   display: flex;
+  background-color: #454141;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   box-sizing: border-box;
   border-radius: 30px;
   padding: 20px;
