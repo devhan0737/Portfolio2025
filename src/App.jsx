@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { Routes, Route } from "react-router-dom"; // Router 관련 import만 남기기
 import "./styles/basic.css";
 import { IsDesktop, mq } from "./lib/mediaQuery";
-import ContentsWrapper from "./components/body/ContentsWrapper";
-import bgImage from "./assets/texture_background.webp";
+import bgImage from "./assets/img/texture_background.webp";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import Project from "./pages/Project";
+import AboutMe from "./pages/AboutMe";
+import ContentsWrapper from "./components/body/ContentsWrapper";
+import PortfolioInfo from "./pages/Project/PortfolioInfo";
+import PillgramInfo from "./pages/Project/PillgramInfo";
 
 const Container = styled.div`
   position: relative;
@@ -36,7 +41,19 @@ function App() {
   return (
     <Container>
       <Header />
-      <ContentsWrapper />
+      <Routes>
+        <Route path="/Portfolio2025/" element={<ContentsWrapper />} />
+        <Route path="/Portfolio2025/project" element={<Project />} />
+        <Route path="/Portfolio2025/aboutme" element={<AboutMe />} />
+        <Route
+          path="/Portfolio2025/project/portfolioinfo"
+          element={<PortfolioInfo />}
+        />
+        <Route
+          path="/Portfolio2025/project/pillgraminfo"
+          element={<PillgramInfo />}
+        />
+      </Routes>
       <Footer />
     </Container>
   );

@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/img/Logo.svg";
 import { mq } from "../../lib/mediaQuery";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.header`
   position: fixed;
@@ -17,12 +18,12 @@ const Container = styled.header`
     padding: 0 200px;
   }
 `;
-const LogoBox = styled.a`
+const LogoBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
   height: 40px;
+  cursor: pointer;
   img {
     width: 20px;
     height: 20px;
@@ -30,10 +31,14 @@ const LogoBox = styled.a`
 `;
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const goHome = () => navigate("/Portfolio2025/");
+
   return (
     <Container>
       <div>{/* <HamburgerMenu /> */}</div>
-      <LogoBox href="#">
+      <LogoBox onClick={goHome}>
         <img src={Logo} alt="main logo" />
       </LogoBox>
     </Container>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mq } from "../../lib/mediaQuery";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.footer`
   margin-top: 40px;
@@ -12,8 +13,9 @@ const Container = styled.footer`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  a:hover {
+  span:hover {
     color: #00d857;
+    cursor: pointer;
   }
   ${mq("desktop")} {
     justify-content: space-between;
@@ -31,22 +33,28 @@ const LinkWrapper = styled.div`
 `;
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const goHome = () => navigate("/Portfolio2025");
+  const goProject = () => navigate("/Portfolio2025/project");
+  const goAboutme = () => navigate("/Portfolio2025/aboutme");
+
   return (
     <Container>
       <FooterMenu>
-        <li>
-          <a href="#">Home</a>
+        <li onClick={goHome}>
+          <span>Home</span>
         </li>
-        <li>
-          <a href="#">Project</a>
+        <li onClick={goProject}>
+          <span>Project</span>
         </li>
-        <li>
-          <a href="#">About</a>
+        <li onClick={goAboutme}>
+          <span>About</span>
         </li>
       </FooterMenu>
       <LinkWrapper>
-        <a href="#">devhsj0737@gmail.com</a>
-        <a href="#">https://github.com/devhan0737</a>
+        <span>devhsj0737@gmail.com</span>
+        <span>https://github.com/devhan0737</span>
       </LinkWrapper>
     </Container>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { IsDesktop, mq } from "../../lib/mediaQuery";
-import rightArrow from "../../assets/RightArrow.svg";
+import rightArrow from "../../assets/img/RightArrow.svg";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -80,7 +81,7 @@ const ButtonBox = styled.div`
     opacity: 0.95;
   }
 
-  a {
+  .littleTitle {
     width: fit-content;
     font-size: 2rem;
     font-weight: 700;
@@ -92,7 +93,7 @@ const ButtonBox = styled.div`
     }
   }
 
-  a::after {
+  .littleTitle::after {
     content: "";
     position: absolute;
     left: 0;
@@ -105,7 +106,7 @@ const ButtonBox = styled.div`
     transition: transform 0.1s ease-in-out;
   }
 
-  &:hover a::after {
+  &:hover .littleTitle::after {
     transform: scaleX(1);
   }
   img {
@@ -129,6 +130,15 @@ const ArrowWrap = styled.div`
 `;
 
 const Preview = () => {
+  const navigate = useNavigate();
+
+  const goProject = () => {
+    navigate("/Portfolio2025/project");
+  };
+  const goAboutme = () => {
+    navigate("/Portfolio2025/aboutme");
+  };
+
   return (
     <Container>
       <SectionTitle>PREVIEW</SectionTitle>
@@ -144,15 +154,15 @@ const Preview = () => {
         </p>
       </PreviewText>
       <ButtonWrapper>
-        <ButtonBox>
-          <a href="#">Project</a>
+        <ButtonBox onClick={goProject}>
+          <span className="littleTitle">Project</span>
           <ArrowWrap>
             프로젝트
             <img src={rightArrow} alt="버튼 화살표" />
           </ArrowWrap>
         </ButtonBox>
-        <ButtonBox>
-          <a href="#">About Me</a>
+        <ButtonBox onClick={goAboutme}>
+          <span className="littleTitle">About Me</span>
           <ArrowWrap>
             가치관, 경험, 계획
             <img src={rightArrow} alt="버튼 화살표" />

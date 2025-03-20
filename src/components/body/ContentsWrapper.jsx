@@ -1,9 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import Preview from "./Preview";
-import Header from "./../header/Header";
-import Home from "./home";
-import Footer from "../footer/Footer";
+import Home from "./Home";
 
 const Container = styled.div`
   display: flex;
