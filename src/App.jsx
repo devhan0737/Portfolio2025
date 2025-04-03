@@ -10,6 +10,7 @@ import AboutMe from "./pages/AboutMe";
 import ContentsWrapper from "./components/body/ContentsWrapper";
 import PortfolioInfo from "./pages/Project/PortfolioInfo";
 import PillgramInfo from "./pages/Project/PillgramInfo";
+import MovieSite from "./pages/Project/MovieSite";
 
 const Container = styled.div`
   position: relative;
@@ -52,6 +53,10 @@ function App() {
         <Route
           path="/Portfolio2025/project/pillgraminfo"
           element={<PillgramInfo />}
+        />
+        <Route
+          path="/Portfolio2025/project/MovieSite"
+          element={<MovieSite />}
         />
       </Routes>
       <Footer />

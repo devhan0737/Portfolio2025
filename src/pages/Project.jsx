@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100svh - 190px);
+  height: 100%;
   padding-top: 56px;
   color: #fff;
   display: flex;
@@ -48,17 +48,14 @@ const SectionTitle = styled.h2`
 `;
 
 const ProjectWrapper = styled.ul`
-  max-width: 900px;
   width: 100%;
-  margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  flex-direction: column;
 
   ${mq("desktop")} {
-    gap: 40px;
+    gap: 20px;
     padding: 60px 0 40px 0;
-    flex-direction: row;
   }
 `;
 const ProjectBox = styled.li`
@@ -66,7 +63,7 @@ const ProjectBox = styled.li`
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
-  height: 160px;
+  max-height: 240px;
   width: 100%;
   border-radius: 30px;
   background: #454141;
@@ -75,7 +72,6 @@ const ProjectBox = styled.li`
 
   ${mq("desktop")} {
     height: 280px;
-    max-width: 440px;
     width: 100%;
   }
 

@@ -67,7 +67,7 @@ const ProjectInfoBox = styled.div`
   }
 `;
 
-const PillgramInfo = () => {
+const MovieSite = () => {
   return (
     <Container>
       <Section>
@@ -106,4 +106,4 @@ const PillgramInfo = () => {
   );
 };
 
-export default PillgramInfo;
+export default MovieSite;
