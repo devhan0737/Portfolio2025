@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   gap: 40px;
   flex-direction: column;
+  padding: 0 0 40px 0;
 `;
 const SectionTitle = styled.h2`
   font-size: 2rem;
@@ -53,7 +54,7 @@ const ButtonWrapper = styled.div`
 
   ${mq("desktop")} {
     gap: 40px;
-    padding: 60px 0 40px 0;
+    padding: 60px 0 60px 0;
     flex-direction: row;
   }
 `;

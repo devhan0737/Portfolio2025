@@ -4,11 +4,11 @@ import Home from "./Home";
 
 const Container = styled.div`
   display: flex;
-  gap: 100px;
+  gap: 90px;
   flex-direction: column;
   position: relative;
   width: 100%;
-  padding-top: 56px;
+  min-height: 100vh;
 `;
 
 const ContentsWrapper = () => {

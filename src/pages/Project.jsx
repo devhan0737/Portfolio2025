@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { PROJECTDATA } from "../assets/Value/Projectdata";
 import { mq } from "../lib/mediaQuery";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Container = styled.div`
   width: 100%;
@@ -10,7 +11,6 @@ const Container = styled.div`
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
   ${mq("desktop")} {
     gap: 40px;
@@ -19,7 +19,7 @@ const Container = styled.div`
 const SectionInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   font-size: 1.6rem;
   ${mq("desktop")} {
     font-size: 1.8rem;
@@ -50,20 +50,20 @@ const SectionTitle = styled.h2`
 const ProjectWrapper = styled.ul`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 
   ${mq("desktop")} {
     gap: 20px;
-    padding: 60px 0 40px 0;
+    padding: 60px 0 60px 0;
   }
 `;
 const ProjectBox = styled.li`
+  aspect-ratio: 9/5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
-  max-height: 240px;
   width: 100%;
   border-radius: 30px;
   background: #454141;
@@ -71,7 +71,6 @@ const ProjectBox = styled.li`
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   ${mq("desktop")} {
-    height: 280px;
     width: 100%;
   }
 
@@ -141,8 +140,16 @@ const Right = styled.div`
   font-size: 1.6rem;
   color: #ccc;
 `;
+
 const Project = () => {
+  const [selectedProject, setSelectedProject] = useState(null); // 추가
   const navigate = useNavigate();
+
+  const handleProjectClick = (id) => {
+    const project = PROJECTDATA.find((item) => item.id === id);
+    setSelectedProject(project);
+    navigate(`/project/${id}`); // 상세 페이지로 이동
+  };
 
   return (
     <Container>
@@ -156,7 +163,7 @@ const Project = () => {
 
       <ProjectWrapper>
         {PROJECTDATA.map((data) => (
-          <ProjectBox key={data.id} onClick={() => navigate(data.page)}>
+          <ProjectBox key={data.id} onClick={() => handleProjectClick(data.id)}>
             <ProjectInfo>
               <ProjectName className="littleTitle">{data.title}</ProjectName>
               <Comments>{data.comments}</Comments>

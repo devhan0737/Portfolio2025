@@ -12,7 +12,6 @@ export const PROJECTDATA = [
     comments: "React 반응형으로 제작된 필그램 클론코딩",
     period: "2025.01~2025.02",
     page: "/Portfolio2025/project/pillgraminfo",
-
     subtitle: `Pillgram은 바쁜 현대사회에서 영양제를 손쉽게 구독할 수 있도록 도와드리는 서비스입니다. 
       기존의 모바일 서비스를 <span>반응형 웹</span> 환경으로 재구현한 프로젝트입니다.
       전체 서비스 내용은 그대로 유지하였습니다.

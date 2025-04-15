@@ -4,15 +4,14 @@ import { mq } from "../../lib/mediaQuery";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.footer`
-  margin-top: 40px;
-  padding-top: 20px;
   width: 100%;
   border-top: 1px solid #fff;
-  height: 150px;
+  height: 100px;
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px 0;
   span:hover {
     color: #00d857;
     cursor: pointer;

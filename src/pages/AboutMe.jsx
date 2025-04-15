@@ -5,8 +5,8 @@ import gitIcon from "../assets/img/github-fill.svg";
 import velog from "../assets/img/velog.webp";
 import rightArrow from "../assets/img/RightArrow.svg";
 import { useNavigate } from "react-router-dom";
+
 const Container = styled.div`
-  /* height: calc(100svh - 190px); */
   height: 100%;
   width: 100%;
   padding-top: 56px;
@@ -122,6 +122,7 @@ const Contents = styled.div`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 `;
 
 const LeftBox = styled.div`

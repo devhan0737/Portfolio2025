@@ -2,17 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 40px 0;
-  margin-top: 56px;
   width: 100%;
-  height: 100%;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  min-height: 100vh;
 `;
 
-const PillgramInfo = () => {
+const ProjectDetail = () => {
   const { id } = useParams(); // URL에서 id를 가져옴
 
   const project = PROJECTDATA.find((data) => data.id === parseInt(id));
@@ -43,4 +37,4 @@ const PillgramInfo = () => {
   );
 };
 
-export default PillgramInfo;
+export default ProjectDetail;

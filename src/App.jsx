@@ -1,24 +1,22 @@
 import styled from "styled-components";
-import { Routes, Route } from "react-router-dom"; // Router 관련 import만 남기기
+import { Routes, Route } from "react-router-dom";
 import "./styles/basic.css";
-import { IsDesktop, mq } from "./lib/mediaQuery";
+import { mq } from "./lib/mediaQuery";
 import bgImage from "./assets/img/texture_background.webp";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Project from "./pages/Project";
 import AboutMe from "./pages/AboutMe";
 import ContentsWrapper from "./components/body/ContentsWrapper";
-import PortfolioInfo from "./pages/Project/PortfolioInfo";
-import PillgramInfo from "./pages/Project/PillgramInfo";
-import MovieSite from "./pages/Project/MovieSite";
+import ProjectDetail from "./pages/Project/ProjectDetail";
 
 const Container = styled.div`
   position: relative;
   width: 100vw;
-  padding: 0 20px;
   background: #262626;
   overflow: hidden;
   box-sizing: border-box;
+  padding: 56px 20px;
   ${mq("desktop")} {
     padding: 0 200px;
   }
@@ -46,18 +44,7 @@ function App() {
         <Route path="/Portfolio2025/" element={<ContentsWrapper />} />
         <Route path="/Portfolio2025/project" element={<Project />} />
         <Route path="/Portfolio2025/aboutme" element={<AboutMe />} />
-        <Route
-          path="/Portfolio2025/project/portfolioinfo"
-          element={<PortfolioInfo />}
-        />
-        <Route
-          path="/Portfolio2025/project/pillgraminfo"
-          element={<PillgramInfo />}
-        />
-        <Route
-          path="/Portfolio2025/project/MovieSite"
-          element={<MovieSite />}
-        />
+        <Route path="/Portfolio2025/project/:id" element={<ProjectDetail />} />
       </Routes>
       <Footer />
     </Container>
