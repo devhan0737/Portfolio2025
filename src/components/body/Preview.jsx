@@ -8,9 +8,12 @@ const Container = styled.div`
   width: 100%;
   color: #fff;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex-direction: column;
   padding: 0 0 40px 0;
+  ${mq("desktop")} {
+    gap: 40px;
+  }
 `;
 const SectionTitle = styled.h2`
   font-size: 2rem;

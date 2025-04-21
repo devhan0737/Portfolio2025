@@ -9,11 +9,14 @@ import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 100%;
   width: 100%;
-  padding-top: 56px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
+  ${mq("desktop")} {
+    padding-top: 56px;
+    gap: 40px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -122,7 +125,10 @@ const Contents = styled.div`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  ${mq("desktop")} {
+    padding-bottom: 40px;
+  }
 `;
 
 const LeftBox = styled.div`
@@ -243,6 +249,7 @@ const IconBox = styled.div`
   justify-content: space-between;
   gap: 20px;
   img {
+    position: relative;
     width: 24px;
     height: 24px;
     ${mq("desktop")} {
@@ -319,7 +326,12 @@ const AboutMe = () => {
             <h3>기술스택 및 도구</h3>
             <IconBox>
               {SKILLICON.map((data) => (
-                <img key={data.id} src={data.src} alt={data.name} />
+                <img
+                  key={data.id}
+                  src={data.src}
+                  alt={data.name}
+                  title={data.name}
+                />
               ))}
             </IconBox>
           </RightBox>

@@ -7,12 +7,12 @@ import { useState } from "react";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding-top: 56px;
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
   ${mq("desktop")} {
+    padding-top: 56px;
     gap: 40px;
   }
 `;
@@ -50,12 +50,14 @@ const SectionTitle = styled.h2`
 const ProjectWrapper = styled.ul`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  padding-bottom: 40px;
 
   ${mq("desktop")} {
     gap: 20px;
     padding: 60px 0 60px 0;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 `;
 const ProjectBox = styled.li`
@@ -148,7 +150,7 @@ const Project = () => {
   const handleProjectClick = (id) => {
     const project = PROJECTDATA.find((item) => item.id === id);
     setSelectedProject(project);
-    navigate(`/project/${id}`); // 상세 페이지로 이동
+    navigate(`/Portfolio2025/project/${id}`); // 상세 페이지로 이동
   };
 
   return (

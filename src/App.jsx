@@ -13,6 +13,7 @@ import ProjectDetail from "./pages/Project/ProjectDetail";
 const Container = styled.div`
   position: relative;
   width: 100vw;
+  min-height: 100vh;
   background: #262626;
   overflow: hidden;
   box-sizing: border-box;
@@ -30,7 +31,7 @@ const Container = styled.div`
     opacity: 0.07;
     background-position: 0px 0px;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     position: absolute;
     inset: 0% auto auto 0%;
   }
@@ -43,8 +44,8 @@ function App() {
       <Routes>
         <Route path="/Portfolio2025/" element={<ContentsWrapper />} />
         <Route path="/Portfolio2025/project" element={<Project />} />
-        <Route path="/Portfolio2025/aboutme" element={<AboutMe />} />
         <Route path="/Portfolio2025/project/:id" element={<ProjectDetail />} />
+        <Route path="/Portfolio2025/aboutme" element={<AboutMe />} />
       </Routes>
       <Footer />
     </Container>
