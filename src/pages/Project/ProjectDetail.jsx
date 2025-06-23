@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { PROJECTARR } from "../../assets/Value/ProjectInfo";
 import { useParams } from "react-router-dom";
 import { mq } from "../../lib/mediaQuery";
 import link from "../../assets/img/link.svg";
 import { SKILLICON } from "../../assets/Value/Skilldata";
+import { PROJECTARR } from "./../../constants/ProjectDetail";
 
 const Container = styled.div`
   width: 100%;

@@ -31,7 +31,7 @@ const Container = styled.div`
     opacity: 0.07;
     background-position: 0px 0px;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     position: absolute;
     inset: 0% auto auto 0%;
   }

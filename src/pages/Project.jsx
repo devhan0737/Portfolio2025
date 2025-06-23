@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { PROJECTDATA } from "../assets/Value/Projectdata";
 import { mq } from "../lib/mediaQuery";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { PROJECTDATA } from "./../constants/Project";
 
 const Container = styled.div`
   width: 100%;
@@ -17,17 +17,36 @@ const Container = styled.div`
   }
 `;
 const SectionInfo = styled.div`
+  font-size: 1.6rem;
+  font-weight: 400;
+  ${mq("desktop")} {
+    font-size: 2.4rem;
+  }
+  span {
+    font-size: 2rem;
+    ${mq("desktop")} {
+      font-size: 4.4rem;
+    }
+  }
+  p {
+    span {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #00d857;
+      ${mq("desktop")} {
+        font-size: 2.4rem;
+      }
+    }
+  }
+`;
+const SelfIntro = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 1.6rem;
-  ${mq("desktop")} {
-    font-size: 1.8rem;
-  }
-  PointText {
-    max-width: 600px;
-    width: 100%;
-    font-size: 1.8rem;
+  .strong {
+    color: #00d857;
+    font-weight: 700;
   }
 `;
 const PointText = styled.span`
@@ -157,10 +176,17 @@ const Project = () => {
     <Container>
       <SectionTitle>Project</SectionTitle>
       <SectionInfo>
-        <PointText>
-          배운 내용을 프로젝트에 적용하며, 실력을 쌓아가고 있습니다
-        </PointText>
-        <p>React를 활용한 프로젝트입니다.</p>
+        <SelfIntro>
+          <span>
+            배운 내용을
+            <span className="strong"> 프로젝트</span>에 적용하며,
+            <br />
+            실력을 쌓아가고 있습니다.
+          </span>
+          <p>
+            <span>React</span>를 활용한 프로젝트입니다.
+          </p>
+        </SelfIntro>
       </SectionInfo>
 
       <ProjectWrapper>

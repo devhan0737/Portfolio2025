@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IsDesktop, IsTablet, mq } from "../../lib/mediaQuery";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   position: relative;
@@ -69,9 +70,23 @@ const Home = () => {
         <h3>FRONTEND DEVELOPER</h3>
       </TitleBox>
       <DevInfo>
-        {INFOARR.map((item) => (
-          <p key={item.id}>{item.text}</p>
-        ))}
+        {INFOARR.map((item) => {
+          if (item.value === "git") {
+            return (
+              <p key={item.id}>
+                <a
+                  href={`https://${item.text}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.text}
+                </a>
+              </p>
+            );
+          } else {
+            return <p key={item.id}>{item.text}</p>;
+          }
+        })}
       </DevInfo>
     </Container>
   );

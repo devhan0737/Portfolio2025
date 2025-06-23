@@ -19,6 +19,7 @@ import ReduxIcon from "../img/Redux.svg";
 import ReactHookFormIcon from "../img/react-hook-form.webp";
 import NextJsIcon from "../img/NextJs.webp";
 import DiscordIcon from "../img/Discord.svg";
+import TypeScriptIcon from "../img/TypeScript.svg";
 
 export const SKILLICON = [
   {
@@ -110,5 +111,10 @@ export const SKILLICON = [
     id: 17,
     skill: "Discord",
     src: DiscordIcon,
+  },
+  {
+    id: 18,
+    skill: "TypeScript",
+    src: TypeScriptIcon,
   },
 ];
