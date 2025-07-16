@@ -7,6 +7,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 100px;
   width: 100%;
   min-height: calc(100svh - 56px);
@@ -17,7 +19,7 @@ const TitleBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0px;
-  text-align: right;
+  text-align: center;
   h2 {
     width: 100%;
     font-size: 4.8rem;
@@ -56,12 +58,12 @@ const DevInfo = styled.div`
 `;
 
 const Home = () => {
-  const INFOARR = [
-    { id: 1, text: "HAN SANGJIN", value: "name" },
-    { id: 2, text: "82+ -10 5372 0737", value: "phone" },
-    { id: 3, text: "devhsj0737@gmail.com", value: "email" },
-    { id: 4, text: "github.com/devhan0737", value: "git" },
-  ];
+  // const INFOARR = [
+  //   { id: 1, text: "HAN SANGJIN", value: "name" },
+  //   { id: 2, text: "82+ -10 5372 0737", value: "phone" },
+  //   { id: 3, text: "devhsj0737@gmail.com", value: "email" },
+  //   { id: 4, text: "github.com/devhan0737", value: "git" },
+  // ];
 
   return (
     <Container>
@@ -69,7 +71,7 @@ const Home = () => {
         <h2>PORTFOLIO</h2>
         <h3>FRONTEND DEVELOPER</h3>
       </TitleBox>
-      <DevInfo>
+      {/* <DevInfo>
         {INFOARR.map((item) => {
           if (item.value === "git") {
             return (
@@ -87,7 +89,7 @@ const Home = () => {
             return <p key={item.id}>{item.text}</p>;
           }
         })}
-      </DevInfo>
+      </DevInfo> */}
     </Container>
   );
 };

@@ -181,11 +181,8 @@ const Project = () => {
             배운 내용을
             <span className="strong"> 프로젝트</span>에 적용하며,
             <br />
-            실력을 쌓아가고 있습니다.
+            실전같은 경험을 쌓아가고 있습니다.
           </span>
-          <p>
-            <span>React</span>를 활용한 프로젝트입니다.
-          </p>
         </SelfIntro>
       </SectionInfo>
 

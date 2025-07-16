@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { IsDesktop, mq } from "../../lib/mediaQuery";
-import rightArrow from "../../assets/img/RightArrow.svg";
-import { Link, useNavigate } from "react-router-dom";
 import Button from "../button/Button";
 
 const Container = styled.div`
@@ -17,6 +15,7 @@ const Container = styled.div`
   }
 `;
 const SectionTitle = styled.h2`
+  padding-bottom: 80px;
   font-size: 2rem;
   font-weight: 400;
   ${mq("desktop")} {
@@ -26,6 +25,7 @@ const SectionTitle = styled.h2`
 const PreviewText = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 12px;
   font-size: 1.6rem;
   font-weight: 300;
@@ -69,9 +69,8 @@ const Preview = () => {
       <SectionTitle>PREVIEW</SectionTitle>
       <PreviewText>
         <span>
-          <span className="name">기술</span>과{" "}
-          <span className="name">태도</span> 모두 믿음직한 동료가 되는 것이
-          목표인 개발자
+          함께 일하고 싶은 개발자가 목표인
+          <br /> 개발자
           <span className="name"> 한상진</span>입니다.
         </span>
         <p>

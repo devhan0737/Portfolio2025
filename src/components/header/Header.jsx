@@ -15,7 +15,7 @@ const Container = styled.header`
   background: #262626;
   z-index: 2;
   ${mq("desktop")} {
-    padding: 0 200px;
+    padding: 0 400px;
   }
 `;
 const LinkLogo = styled(Link)`

@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   width: 100%;
-  gap: 90px;
+  gap: 200px;
   min-height: 100vh;
 `;
 

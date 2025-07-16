@@ -19,7 +19,7 @@ const Container = styled.div`
   box-sizing: border-box;
   padding: 56px 20px;
   ${mq("desktop")} {
-    padding: 0 200px;
+    padding: 0 400px;
   }
 
   &::before {
