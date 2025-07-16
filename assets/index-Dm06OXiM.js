@@ -559,7 +559,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
 `,pm=ne.h2`
   font-size: 2rem;
   font-weight: 400;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   ${b("desktop")} {
     font-size: 2.4rem;
     padding-bottom: 80px;
