@@ -562,6 +562,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
   font-weight: 400;
   ${b("desktop")} {
     font-size: 2.4rem;
+    padding-bottom: 0px;
   }
 `,hm=ne.div`
   display: flex;
